@@ -1,1 +1,14 @@
-<p>users-list works!</p>
+<div class="users-list-container">
+  <mat-card appearance="outlined" *ngFor="let user of users">
+    <mat-card-title>
+      {{ user.firstName }} {{ user.lastName }}
+    </mat-card-title>
+    <mat-card-content>
+      <div class="card-content-container">
+        <span>{{ user.email }}</span>
+        <span>{{ user.phone }}</span>
+        <span>{{ user.address }}, {{ user.city }}, {{ user.state}} {{ user.zip }}</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

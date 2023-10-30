@@ -1,0 +1,22 @@
+  .users-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; // adjust the padding between the cards as needed
+  }
+
+  .mat-mdc-card {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+    background-color: antiquewhite;
+  }
+
+  .mat-mdc-card-title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .card-content-container {
+    display: flex;
+    gap: 20px;
+  }

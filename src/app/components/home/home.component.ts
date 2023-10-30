@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Users } from 'src/app/interfaces/users';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-home',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  users: Users[] = [];
+
+  constructor() {
+  }
 
 }

@@ -1,0 +1,60 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+// Primary is the color of the header (Nav-bar) >> #0D47A1
+$dwr-primary: mat.define-palette(mat.$blue-palette, 900);
+// Accent is the standard color of action buttons >> #2E78F9
+$dwr-accent: mat.define-palette(mat.$blue-palette, A400);
+// Warn is the color of our error messages and delete buttons >> #D32F2F
+$dwr-warn: mat.define-palette(mat.$red-palette, 700);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$dwr-theme: mat.define-light-theme((color:(primary: $dwr-primary,
+        accent: $dwr-accent,
+        warn: $dwr-warn,
+      ),
+    ));
+
+$color-config: mat.get-color-config($dwr-theme);
+$primary-palette: map.get($color-config, 'primary');
+$accent-palette: map.get($color-config, 'accent');
+$warn-palette: map.get($color-config, 'warn');
+
+$primary: mat.get-color-from-palette($primary-palette, 900);
+$accent: mat.get-color-from-palette($accent-palette, A400);
+$warn: mat.get-color-from-palette($warn-palette, 700);
+
+$primary-contrast: mat-color($primary, default-contrast);
+$accent-contrast: mat-color($accent, default-contrast);
+$warn-contrast: mat-color($warn, default-contrast);
+
+$black: #000; // Global black
+$tooltip-bg: #1E1E1EF8; // Dark Gray tooltip at 97% in HEX
+$text-label: #00000099; // Gray label text black at 60% in HEX
+$cal-approved: #4D4D4D; // Gray approved Calendar color
+$gray: #747474; // Gray 400 - for Sync header
+$gray-read-only: #9D9D9D; // Read only color for DWR and Materials calendars
+
+$bg-color: #92A5AF; // Revised Blue Gray 200 - Main app BG color, "Bookmarks" on Contracts
+$bg-color-lighter: #B0BEC5; // Blue Gray 200 - subheaders
+$bg-color-lightest: #CFD9DD; // New Blue Gray lighter -Work Item BG color, etc
+
+$text-dimmed: #BDBDBD; // Gray text for "disabled" or "not set"
+$gray-disabled-cal: #E5E5E5; // Calendar disabled date bg
+$bg-card-color: #EDEDED; // Card container color
+$white: #FFF; // Global white
+
+$caution: #FE8E2F; // Orange A400
+$confirm: #00E578; // above color too vivid - THIS IS A STOP GAP COLOR
+
+
+$materials-dark: #005F63; // Cyan 900
+$materials-accent: #0196A6; // Cyan 700
+
+$negative-light: #F2A8A2;
+$negative: #E68981;
+$positive-light: #B5C7ED;
+$positive: #81A0E6;

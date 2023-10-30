@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { UsersListComponent } from './components/users-list/users-list.component';
 import { AddUserFormComponent } from './components/add-user-form/add-user-form.component';
+import { AngularMaterialModule } from './modules/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddUserFormComponent } from './components/add-user-form/add-user-form.c
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
