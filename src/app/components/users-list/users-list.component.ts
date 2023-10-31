@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Users } from 'src/app/interfaces/users';
 import { DataService } from 'src/app/services/data.service';
 
@@ -8,12 +8,8 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent {
-  users: Users[] = [];
+  @Input() users: Users[] = [];
 
-  constructor(private dataService: DataService) { }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.users = this.dataService.getUsers();
-    console.log(this.users);
-  }
 }

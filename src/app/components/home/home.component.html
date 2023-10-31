@@ -1,4 +1,12 @@
 <div class="home-container">
-  <h2>Users</h2>
-  <app-users-list></app-users-list>
+  <div class="header">
+    <h2>Users</h2>
+    <button mat-mini-fab (click)="toggleAddUserForm()">
+      <span class="material-icons">
+        add
+      </span>
+    </button>
+  </div>
+  <app-add-user-form *ngIf="showAddUserForm" (addUser)="addUser($event)"></app-add-user-form>
+  <app-users-list [users]="users"></app-users-list>
 </div>

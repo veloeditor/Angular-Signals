@@ -1,1 +1,22 @@
-<p>add-user-form works!</p>
+<div class="form-container">
+  <form [formGroup]="addUserForm" (ngSubmit)="onSubmit(addUserForm)">
+
+    <label>First Name:
+      <input matInput formControlName="firstName" placeholder="First Name">
+    </label>
+
+    <label>Last Name:
+      <input matInput formControlName="lastName" placeholder="Last Name">
+    </label>
+
+    <label>Email:
+      <input matInput formControlName="email" placeholder="Email">
+    </label>
+
+    <label>Phone:
+      <input matInput formControlName="phone" placeholder="Phone">
+    </label>
+
+    <button mat-raised-button type="submit" [disabled]="!addUserForm.valid">Add User</button>
+  </form>
+</div>
